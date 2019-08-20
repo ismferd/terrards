@@ -17,3 +17,6 @@ variable "private_subnets" {
   type = list(string)
   default = ["subnet-xxxxxxxx", "subnet-xxxxxxxx", "subnet-xxxxxxxx"]
 }
+variable "ownwe" {
+  default = "me"
+}

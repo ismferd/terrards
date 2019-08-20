@@ -5,6 +5,7 @@ resource "aws_ssm_parameter" "secret" {
   value       = "${var.database_master_password}"
   overwrite   = "true"
   tags = {
+    owner = "{var.owner}"
     environment = "${var.environment}"
   }
 }

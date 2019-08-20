@@ -4,6 +4,11 @@ resource "aws_rds_cluster_instance" "cluster_instances" {
   engine_version     = "5.7.mysql_aurora.2.03.2" 
   engine             = "aurora-mysql"
   auto_minor_version_upgrade = "true"
+  tags = {
+    owner = "{var.owner}"
+    environment = "${var.environment}"
+    engine = "aurora"
+  }
 }
 
 resource "aws_rds_cluster" "aurora" {
@@ -18,6 +23,11 @@ resource "aws_rds_cluster" "aurora" {
   depends_on                 = [aws_security_group.allow_access_to_rds]
   db_subnet_group_name       = "${aws_db_subnet_group.rds_aurora.name}" 
   final_snapshot_identifier  = "finalshot"
+  tags = {
+    owner = "{var.owner}"
+    environment = "${var.environment}"
+    engine = "aurora"
+  }
 }
 
 data "aws_ssm_parameter" "secret" {
