@@ -17,4 +17,3 @@ You are building the next resources:
 - A subnet group where your rds intance will be allocated.
 - A Parameter Store where we will save the master password of RDS (`/environment/database/password/master`).
 - A RDS Cluster and RDS intances.
-
