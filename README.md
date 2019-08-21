@@ -20,4 +20,4 @@ You are building the next resources:
 
 **NOTE**: You will save the status of your stack in local. 
 
-- If you want to work remotly (like s3, consul or whaever you want) instead of working in local, you will add a backend, take a look in this documentation: https://www.terraform.io/docs/backends/index.html
+- If you want to work remotly (like s3, consul or whaever you want) instead of working in local, you will add a backend, take a look there -> https://www.terraform.io/docs/backends/index.html
