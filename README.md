@@ -3,13 +3,13 @@
 A simple [Aurora RDS](https://aws.amazon.com/rds/aurora/?nc1=h_ls) PoC provisioned by [Terraform](https://www.terraform.io/intro/index.html)
 
 ## Setting up 
-- Configure your default values in [variables](variables.tf)
-- Configure the RDS MasterPassword in [secrets](secrets.tfvars)
+- Configure your default values in [variables](templates/rds_cluster/variables.tf)
+- Configure the RDS MasterPassword in [secrets](templates/rds_cluster/secrets.tfvars)
 
 ## Building the infrastructure
 
 ```sh
-AWS_PROFILE=your_profile terraform apply -var-file=secrets.tfvars
+cd templates/rds_cluster; AWS_PROFILE=your_profile terraform apply -var-file=secrets.tfvars
 ```
 
 You are building the next resources:
